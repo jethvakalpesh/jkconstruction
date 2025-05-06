@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Home page</title>
+
+    <link rel="stylesheet" href="construction.css">
+
+    <!-- tailwind css 3  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- flowbite js cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.js"
+        integrity="sha512-LThUFuq6Y8DTeSxG7VgJQu+3slKAhZ1u3z1EJdZESaVuQIEJ7TXC/DV8xNNEDFW01iWF4tUuzeC4RdiyrRPdRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- flowbite css cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.css"
+        integrity="sha512-aHc6FOiM/2Ko2Au1xqzHo++VfZGZI7cgUJptweRq1j2qrPF8UZdO+3MScBvQwPpclaxEDMBJ4bAuulsIz1Y8uA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- owl Carousel animation -->
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/css/owl.theme.default.min.css">
+
+    <!-- inter fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Underdog&display=swap"
+        rel="stylesheet"> -->
+
+    <!-- Titillium fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Underdog&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-200">
+
+    <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
+        <div class="chat-box  bg-gray-100 p-2 rounded-md ">
+            <div class="top">
+                <div class="flex justify-between bg-gray-300 rounded-md">
+                    <div class="back-btn flex">
+                        <div><i class="fa-solid fa-arrow-left-long hover:bg-gray-400  p-2"></i></div>
+                        <div><i class="fa-solid fa-ellipsis  hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                    <div class="min-btn" id="min-btn">
+                        <div><i class="fa-solid fa-minus hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                </div>
+                <div class="flex mt-4 ">
+                    <div class="img overflow-hidden">
+                        <img class="rounded-full"
+                            src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                            alt="">
+                    </div>
+                    <div class="chat-text">
+                        <div class="bg-gray-200 p-1 text-sm rounded-md ml-2 mt-2">
+                            <p>Hi! What can I do for you?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div
+                    class="end bg-gray-800 hover:bg-gray-300 text-gray-100 hover:text-gray-800  text-center text-sm rounded-md p-2 mt-52">
+                    <a href="">Chat
+                        now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div id="chatToggle" data-aos="fade-left" data-aos-duration="1500"
+            class="fixed-chat fixed bottom-20 border-gray-800  right-4 z-20 overflow-hidden rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800 w-14 h-14 cursor-pointer">
+            <img src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                alt="" class="w-full  h-full object-cover rounded-full">
+        </div>
+    </div>
+
+    <div class="scroll-btn overflow-hidden">
+        <div data-aos="fade-left" data-aos-duration="1500" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed-btn rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800  static-btn">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </div>
+
+    <header class="w-full shadow-md static-header">
+        <section class="hidden md:block">
+            <div class="bg-gray-600">
+                <div class="container mx-auto px-[15px] md:px-[36px] text-gray-100">
+                    <div class="flex items-center justify-between p-2">
+                        <div class="top-left">
+                            <a class="mail" href=""><i
+                                    class="fa-solid fa-envelope mr-2"></i>jkconstruction123@gmail.com</a>
+                        </div>
+                        <div class="top-center">
+                            <a href="call"><i class="fa-solid fa-phone mr-2"></i>+123 4567 890</a>
+                        </div>
+                        <div class="top-right">
+                            <div class="flex text-md">
+                                <a href=""><i class="fab fa-facebook-f mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-youtube mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-instagram mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fa-brands fa-whatsapp mr-2 hover:text-gray-800"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="bg-gray-800 text-gray-200  font-semibold text-xl ">
+            <div class="container mx-auto px-[15px] md:px-[36px]">
+                <div class="flex justify-between items-center ">
+                    <!-- Logo -->
+                    <div class=" logo ">
+                        <img src="img/jk.png" width="100%" alt="">
+                    </div>
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex space-x-6 items-center m-4 ">
+                        <li class="relative group">
+                            <a href="construction.html" class="hover:text-gray-400">Home</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Services <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0px] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Interior
+                                        Design</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Home
+                                        Renovations</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Architecture &
+                                        Building</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                About <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">About Us</a>
+                                </li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Team</a></li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Blog <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Grid</a>
+                                </li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Post
+                                        Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Project <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contect.html" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="hidden md:block m-2">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="construction.html" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a></li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Services</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Interior
+                                        Design</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Home
+                                        Renovations</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Architecture & Building</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">About</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">About
+                                        Us</a></li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Team</a>
+                                </li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">FAQ</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Blog</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Grid</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog Post
+                                        Details</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Project</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="contect.html" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section
+            class="relative w-full h-screen flex items-center justify-center text-white px-[15px] md:px-12 pt-28 pb-10 md:pb-14 lg:pb-28">
+            <div class="absolute home-page inset-0">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="relative  z-10 max-w-4xl text-left my-[80px] ">
+                <h4 class="text-white text-lg  ">
+                    Building The Better Future
+                </h4>
+                <h1 class=" lg:text-5xl md:text-3xl text-2xl font-semibold leading-tight mt-4">
+                    Build Your Dream <br> Project with Us Today!
+                </h1>
+                <p class="text-sm md:text-base mt-4 opacity-80">
+                    We are dedicated to building structures that last and relationships that endure.
+                    With a focus on quality, precision, and innovation, we provide a full range of construction
+                    services.
+                </p>
+                <div class="button">
+                    <a class="lg:px-6 md:px-4 inline-flex item-center mr-2 px-2 py-2 mt-4 duration-300 border-2 bg-gray-200 text-gray-800 hover:text-gray-100 hover:bg-transparent rounded-lg font-semibold "
+                        href="about.html">OUR SERVICE</a>
+                    <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-200 text-gray-100 hover:text-gray-800 hover:bg-gray-100 rounded-lg font-semibold "
+                        href="about.html">ABOUT</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="main mx-[15px] lg:py-[80px]">
+            <div class="container mx-auto ">
+                <div data-aos="zoom-in" data-aos-duration="2000" class="head-text text-center lg:pb-[40px]">
+                    <h3 class="text-lg m-2">Provide Service</h3>
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold ">Interested in Our Services</h1>
+                </div>
+                <div class="provide-service-sec">
+                    <div class="flex flex-wrap  justify-content-center">
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class=" p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="hover:bg-gray-100 hover:scale-75 duration-300 border-2 hover:border-gray-500 rounded-xl px-4 py-10">
+                                <i class="fa-solid fa-couch text-[40px]"></i>
+                                <p class="text-xl font-bold">
+                                    Interior Design</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="hover:bg-gray-100   hover:scale-75  duration-300 p-4 rounded-xl border-2 hover:border-gray-500 px-4 py-10">
+                                <i class="fa-solid fa-lightbulb text-[40px]"></i>
+                                <p class="text-xl font-bold">Lighting Design</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center">
+                            <div
+                                class="hover:bg-gray-100  hover:scale-75  duration-300  p-4 rounded-xl border-2 hover:border-gray-500 px-4 py-10">
+                                <i class="fa-solid fa-house-chimney text-[40px]"></i>
+                                <p class="text-xl font-bold">
+                                    Architectural</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="hover:bg-gray-100  hover:scale-75  duration-300  p-4 rounded-xl border-2 hover:border-gray-500 px-4 py-10">
+                                <i class="fa-solid fa-pen-ruler text-[40px]"></i>
+                                <p class="text-xl font-bold">Design & Planning</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="hover:bg-gray-100 hover:scale-75  duration-300  p-4 rounded-xl border-2 hover:border-gray-500 px-4 py-10">
+                                <i class="fa-solid fa-city text-[40px]"></i>
+                                <p class="text-xl font-bold">Construction</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="hover:bg-gray-100  hover:scale-75  duration-300  p-4 rounded-xl border-2 hover:border-gray-500 px-4 py-10">
+                                <i class="fa-solid fa-couch text-[40px]"></i>
+                                <p class="text-xl font-bold">Furniture & Décor</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white">
+            <div class="main  mx-[15px] lg:py-[80px]">
+                <div class="container  mx-auto px-4 py-8 overflow-hidden">
+                    <div class="flex flex-col lg:flex-row  gap-8">
+                        <div data-aos="fade-right" data-aos-duration="1500"
+                            class="w-full xl:w-2/3 lg:w-1/2  lg:text-left lg:m-2">
+                            <h3 class="text-lg lg:mb-2 ">ABOUT US</h3>
+                            <h2 class="text-xl lg:text-2xl md:text-xl font-semibold mb-2">
+                                Turning Visions into Reality: Our
+                                Construction Expertise </h2>
+                            <p class="text-gray-700 text-sm lg:text-base  mb-4">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam quidem qui iure magnam
+                                eaque
+                                fugiat ipsum dolores ipsam maiores velit deleniti, voluptatum quaerat reprehenderit quia
+                                consectetur obcaecati voluptas adipisci ad in nulla quo similique. Omnis rem laudantium,
+                                nesciunt sapiente sunt, optio eveniet dolorem dolore ducimus odit non quia nam
+                                asperiores!
+                            </p>
+                            <p class="text-gray-700 text-sm lg:text-base  mb-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis hic eius eos
+                                recusandae
+                                reiciendis, fugit obcaecati minima dolores accusantium a repellendus eum soluta, aliquam
+                                quae?
+                            </p>
+                            <div class="button">
+                                <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                    href="about.html">More About </a>
+                            </div>
+                        </div>
+                        <div data-aos="fade-left" data-aos-duration="1500"
+                            class="w-full hello overflow-hidden  xl:w-1/3 lg:w-1/2  mt-6 lg:mt-0 flex justify-center">
+                            <img src="https://buildar.peacefulqode.co.in/wp-content/uploads/2025/01/about-inner-001.webp"
+                                alt="" class="w-full rounded-md max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rank-section bg-gray-300 ">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="rank text-white">
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl">87+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Happy Customers</p>
+                    </div>
+                    <div class="rank text-white">
+                        <h1 class="font-bold text-white text-3xl md:text-4xl lg:text-5xl">43+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Complete Work</p>
+                    </div>
+                    <div class="rank text-white">
+                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl">57+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Our Award</p>
+                    </div>
+                    <div class="rank text-white">
+                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl">48+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Company Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main mx-[15px] lg:py-[80px]">
+            <div class="container mx-auto px-4 py-8 overflow-hidden">
+                <div class="main flex flex-col lg:flex-row  gap-8">
+                    <div data-aos="fade-right" data-aos-duration="1500"
+                        class="w-full hello  xl:w-1/3 lg:w-1/2  mt-6 lg:mt-0 flex justify-center">
+                        <img src="https://profcourse.ru/wp-content/uploads/2022/10/zaglavnaya-1-scaled.jpg" alt=""
+                            class="w-full rounded-md max-w-xs sm:max-w-sm md:max-w-md lg:max-w-full">
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500"
+                        class="w-full xl:w-2/3 lg:w-1/2  lg:text-left lg:m-2">
+                        <h2 class="text-xl lg:text-3xl md:text-xl font-semibold mb-2">
+                            Looking for a Top Quality
+                            Roof, Look No Further! </h2>
+                        <p class="text-gray-700 text-sm lg:text-base  mb-4">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. A sapiente laborum magnam sunt
+                            ullam
+                            porro repudiandae aperiam perferendis ipsa explicabo.
+                        </p>
+                        <div class="flex">
+                            <div class="range w-full items-baseline">
+                                <div data-aos="fade-left" data-aos-duration="500" class="flex items-baseline">
+                                    <div class="w-2/3 bg-gray-400 rounded-full  mb-4">
+                                        <div class="bg-gray-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                                            style="width: 82%"> 82%</div>
+                                    </div>
+                                    <h2 class="font-semibold text-md w-1/3  ml-4">Cleaning</h2>
+                                </div>
+                                <div data-aos="fade-left" data-aos-duration="900" class="flex items-baseline ">
+                                    <div class="w-2/3 bg-gray-400 rounded-full mb-4">
+                                        <div class="bg-gray-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                                            style="width: 66%"> 66%</div>
+                                    </div>
+                                    <h2 class="font-semibold text-md w-1/3 ml-4 ">Build up</h2>
+                                </div>
+                                <div data-aos="fade-left" data-aos-duration="1200" class="flex items-baseline">
+                                    <div class="w-2/3 bg-gray-400 rounded-full mb-4">
+                                        <div class="bg-gray-700 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                                            style="width: 69%"> 69%</div>
+                                    </div>
+                                    <h2 class="font-semibold text-md w-1/3 ml-4 ">Repairing</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main bg-gray-300 ">
+            <div class="blog-section mx-[15px] lg:py-[80px]">
+                <div class="container   mx-auto ">
+                    <div class="main">
+                        <div class="service-section overflow-hidden ">
+                            <div data-aos="fade-up" data-aos-duration="2000" class="service-title text-center">
+                                <h3 class="text-lg m-2">Our Blogs</h3>
+                                <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold pb-6 block">Articles & Blogs
+                                </h1>
+                            </div>
+                            <div class="flex flex-wrap lg:py-8">
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                                    <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                        <div class="card-img overflow-hidden">
+                                            <img src="https://avatars.mds.yandex.net/i?id=301af0007cb43ccdce0b7b88eecec4c233ef3112-10414206-images-thumbs&n=13"
+                                                class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+                                                alt="...">
+                                        </div>
+                                        <div class="lg:p-4 p-[15px]">
+                                            <h5 class="lg:text-xl text-lg font-bold mb-2">Best Renovation</h5>
+                                            <p class="text-gray-700 lg:text-base text-sm mb-3 ">Constructor explains how
+                                                you can enjoy high-end
+                                                flooring
+                                                trends like textured wood and realistic stones with new laminate ...</p>
+                                            <div class="button">
+                                                <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                    href="blog.html">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                                    <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                        <div class="card-img overflow-hidden">
+                                            <img src="https://www.asite.com/hubfs/Asite_Blog_7_Tips_for_Selecting_the_Best_Construction_Technology_plan_tablet.jpeg"
+                                                class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 "
+                                                alt="...">
+                                        </div>
+                                        <div class="lg:p-4 p-[15px]">
+                                            <h5 class="lg:text-xl text-lg font-bold mb-2">The Effective Teamwork
+                                            </h5>
+                                            <p class="text-gray-700 lg:text-base text-sm mb-3">Constructor explains how
+                                                you can enjoy high-end
+                                                flooring
+                                                trends like textured wood and realistic stones with new laminate ...</p>
+                                            <div class="button">
+                                                <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                    href="blog.html">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                                    <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                        <div class="card-img overflow-hidden">
+                                            <img src="https://guiademicroempresas.es/img/genericas/jardinero.jpg"
+                                                class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+                                                alt="...">
+                                        </div>
+                                        <div class="lg:p-4 p-[15px]">
+                                            <h5 class="lg:text-xl text-lg font-bold mb-2">The Green Building
+                                            </h5>
+                                            <p class="text-gray-700 lg:text-base text-sm mb-3">Constructor explains how
+                                                you can enjoy high-end
+                                                flooring
+                                                trends like textured wood and realistic stones with new laminate ...</p>
+                                            <div class="button">
+                                                <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                    href="blog.html">Know More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quote-section py-[36px] px-[15px] md:p-[36px] bg-gray-400 w-100% ">
+            <div data-aos="zoom-in" data-aos-duration="1500" class="md:flex justify-center
+            align-items-center ">
+                <div class="quote-text-section ">
+                    <h3 class="lg:text-2xl md:text-lg text-base  lg:mx-4 md:mx-2 font-semibold">IF YOU FIND A HIGH
+                        QUALITY CONTRUCTION FOR
+                        YOUR PROJECT</h3>
+                </div>
+                <div class="button flex ">
+                    <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200 hover:bg-gray-800 rounded-lg  "
+                        href="project.html">View Details</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="main bg-gray-300  ">
+
+            <div class="project-section mx-[15px] lg:py-[80px]">
+                <div class="container mx-auto px-[15px] md:px-[36px]  overflow-hidden">
+                    <div data-aos="zoom-in" data-aos-duration="2000" class="project-text-section text-center mb-4 ">
+                        <h3 class="lg:text-4xl md:text-3xl text-2xl font-semibold pb-6 block">Our Future Project</h3>
+                        <div class="project-choice">
+                            <div class=" flex justify-center flex-wrap  project-button ">
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center m-2 p-2 py-2 bg-gray-800  text-gray-200 rounded-lg  "
+                                        href="">All</a>
+                                </div>
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                        href="">Renovation</a>
+                                </div>
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2  py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                        href="">Design and Build</a>
+                                </div>
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                        href="">Garden</a>
+                                </div>
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2  py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                        href="">Interior</a>
+                                </div>
+                                <div class="button">
+                                    <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                        href="">Office</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="your-project">
+                        <div class="flex flex-wrap">
+                            <div data-aos="zoom-in-up" data-aos-duration="800" class="p-2 md:w-6/12 lg:w-4/12 w-full">
+                                <div class="container mx-auto ">
+                                    <div class="main  ">
+                                        <div class="effect overflow-hidden rounded-md">
+                                            <img src="https://uiparadox.co.uk/public/templates/buildex/v2/assets/media/images/project-1.png"
+                                                alt="Avatar"
+                                                class=" ease-in-out hover:-translate-y-1 hover:scale-110 duration-300 rounded-md image">
+                                            <div class="overlay text-left bg-gray-100">
+                                                <h3 class="text-sm font-semibold text-gray-500 mb-2">PROJECT 1</h3>
+                                                <h2 class="lg:text-xl md:text-lg text-lg text-gray-800  font-bold mb-2">
+                                                    SUMMIT HEIGHT
+                                                </h2>
+                                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Project overview
+                                                </h3>
+                                                <p class="text-sm text-gray-600 mb-2">Lorem ipsum dolor sit amet
+                                                    consectetur
+                                                    adipisicing elit.
+                                                    Autem, voluptatibus. Dolores, aut. Ab, ad deleniti repellendus sunt
+                                                    natus
+                                                    laborum accusamus.</p>
+                                                <div class="button">
+                                                    <a class=" md:px-4 text-base inline-flex item-center p-2  duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                        href="project.html">Explore More...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-up" data-aos-duration="800" class="p-2 md:w-6/12 lg:w-4/12 w-full">
+                                <div class="container mx-auto ">
+                                    <div class="main  ">
+                                        <div class="effect overflow-hidden rounded-md">
+                                            <img src="https://uiparadox.co.uk/public/templates/buildex/v2/assets/media/images/project-2.png"
+                                                alt="Avatar"
+                                                class=" ease-in-out hover:-translate-y-1 hover:scale-110 duration-300  rounded-md image">
+                                            <div class="overlay text-left bg-gray-100">
+                                                <h3 class="text-sm font-semibold text-gray-500 mb-2">PROJECT 2</h3>
+                                                <h2 class="lg:text-xl md:text-lg text-lg text-gray-800  font-bold mb-2">
+                                                    SUMMIT HEIGHT
+                                                </h2>
+                                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Project overview
+                                                </h3>
+                                                <p class="text-sm text-gray-600 mb-2">Lorem ipsum dolor sit amet
+                                                    consectetur
+                                                    adipisicing elit.
+                                                    Autem, voluptatibus. Dolores, aut. Ab, ad deleniti repellendus sunt
+                                                    natus
+                                                    laborum accusamus.</p>
+                                                <div class="button">
+                                                    <a class="  text-base inline-flex item-center p-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                        href="project.html">Explore More...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="zoom-in-up" data-aos-duration="800" class="p-2 md:w-6/12 lg:w-4/12 w-full ">
+                                <div class="container mx-auto ">
+                                    <div class="main">
+                                        <div class="effect rounded-md overflow-hidden ">
+                                            <img src="https://uiparadox.co.uk/public/templates/buildex/v2/assets/media/images/project-3.png"
+                                                alt="Avatar"
+                                                class="ease-in-out hover:-translate-y-1 hover:scale-110 duration-300  rounded-md image">
+                                            <div class="overlay text-left bg-gray-100">
+                                                <h3 class="text-sm font-semibold text-gray-500 mb-2">PROJECT 3</h3>
+                                                <h2 class="lg:text-xl md:text-lg text-lg text-gray-800  font-bold mb-2">
+                                                    SUMMIT HEIGHT
+                                                </h2>
+                                                <h3 class="text-lg font-semibold text-gray-800 mb-2">Project overview
+                                                </h3>
+                                                <p class="text-sm text-gray-600 mb-2">Lorem ipsum dolor sit amet
+                                                    consectetur
+                                                    adipisicing elit.
+                                                    Autem, voluptatibus. Dolores, aut. Ab, ad deleniti repellendus sunt
+                                                    natus
+                                                    laborum accusamus.</p>
+                                                <div class="button">
+                                                    <a class="  text-base inline-flex item-center  p-2  duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                        href="project.html">Explore More...</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main mx-[15px] lg:py-[80px]">
+
+            <div class="">
+                <div class="container mx-auto  md:px-[36px] overflow-hidden">
+                    <div class="main">
+                        <div data-aos="zoom-in" data-aos-duration="2000" class="head-text text-center ">
+                            <h3 class="lg:text-4xl md:text-3xl text-gray-800 text-2xl font-semibold block">What we do ?
+                            </h3>
+                            <span class="icon text-4xl "><i
+                                    class="fa-solid text-gray-800 fa-window-minimize"></i></span>
+                        </div>
+                        <div class="provide-service-sec">
+                            <div class="flex flex-wrap  ">
+                                <div data-aos="fade-up" data-aos-duration="2000" class=" md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">HOPPER</h3>
+                                            <P class="text-base text-gray-500">Industrial hoppers on a production line
+                                                to
+                                                allow
+                                                for quick visual checking of component levels without interrupting the
+                                                production process.</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000" class="  md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">INDUSTRIAL DUCTWORK</h3>
+                                            <P class="text-base text-gray-500">We offer top quality sheet metal
+                                                fabrication
+                                                engineering where each project centers around a plan.</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="   md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">FAN HOUSINGS</h3>
+                                            <P class="text-base text-gray-500">There are two general classifications of
+                                                fans:
+                                                the propeller or axial flow fan (see ED-2300) and the centrifugal or
+                                                radial
+                                                flow
+                                                fan.</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="   md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">STRUCTURAL STEEL BUILDINGS</h3>
+                                            <P class="text-base text-gray-500">We offer the best pre-engineered,
+                                                structural
+                                                steel buildings to our clients which are very advantageous for them...
+                                            </P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000" class="  md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">PLATFORMS, STAIRWAYS</h3>
+                                            <P class="text-base text-gray-500">Steel stairways and platforms we produce
+                                                are
+                                                high-quality and will serve for a very long time</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="   md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">MOTOR & FAN BASES</h3>
+                                            <P class="text-base text-gray-500">We produce super durable steel motor &
+                                                fan
+                                                bases...</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000"
+                                    class="   md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold"> TANKS</h3>
+                                            <P class="text-base text-gray-500">All tanks are available in either UL142
+                                                single-wall or double-wall construction and are environmentally safe and
+                                                structurally sound.</P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000" class="  md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">PRESSURE VESSELS</h3>
+                                            <P class="text-base text-gray-500">We provide storage solutions for LPG
+                                                (Liquefied
+                                                Petroleum Gases), Propane, Butane, Pentane, Aqueous and other gaseous
+                                                products.
+                                            </P>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-aos="fade-up" data-aos-duration="2000" class="  md:w-6/12 lg:w-4/12 w-full  ">
+                                    <div class="lg:flex px-4 py-10">
+                                        <i class="fa-solid fa-circle-check lg:text-5xl md:text-4xl text-3xl mr-3"></i>
+                                        <div class="text">
+                                            <h3 class="font-semibold">SCRUBBERS</h3>
+                                            <P class="text-base text-gray-500">Our scrubbers remove traces of liquid
+                                                droplets
+                                                from gas streams to protect downstream equipment from damage and
+                                                failure.
+                                            </P>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div data-aos="fade-up" data-aos-duration="2000" class="head-text text-center lg:pb-[40px]">
+                                <a class="lg:px-6 md:px-4 inline-flex item-center p-2 m-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                    href="services.html">View all services <i
+                                        class="fa-solid fa-angle-right ml-2 text-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main bg-gray-100 ">
+            <div class="mx-[15px] lg:py-[80px]">
+                <div class="container mx-auto px-[15px]">
+                    <div class="slider-container ">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo1.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo2.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo3.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo4.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo5.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo6.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo7.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo8.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo9.png" alt=""></div>
+                            </div>
+                            <div class="item">
+                                <div class="w-[70%] flex justify-self-center"><img class="grayscale hover:grayscale-0"
+                                        width="100%" src="img/pnglogo10.png" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <div class="footer bg-gray-800">
+            <div class="container mx-auto px-[15px] sm:px-10 md:px-[36px] pt-[60px] pb-[20px]">
+                <div class="flex flex-wrap justify-between gap-6 md:gap-0 md:flex-nowrap">
+                    <div class="footer-logo w-full md:w-1/3 text-left">
+                        <div class="logo">
+                            <img src="img/jk.png" class="mx-auto  md:w-full" alt="">
+                        </div>
+                        <div class="adress">
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">123, surat street,india</h4>
+                            </a>
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">+123 4567 890</h4>
+                            </a>
+                        </div>
+                        <div class="location-section text-[30px] text-gray-200  flex justify-left md:justify-start ">
+                            <i class="fa-brands fa-square-facebook m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-twitter m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-youtube m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-instagram m-2 hover:text-gray-500"></i>
+                        </div>
+                    </div>
+                    <div class="footer-text1 text-gray-200  w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Useful Links</h2>
+                        <a href="services.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i> Services</h4>
+                        </a>
+                        <a href="about.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>About</h4>
+                        </a>
+                        <a href="blog.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Blog</h4>
+                        </a>
+                        <a href="project.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Our project</h4>
+                        </a>
+                        <a href="contect.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Contact</h4>
+                        </a>
+                    </div>
+                    <div class="footer-text1 text-gray-200 w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Newsletter</h2>
+                        <h4>Applications produce before front-end portals visualize front-end</h4>
+                        <div class="my-4">
+                            <input class="w-full p-2  rounded-md text-gray-700" type="email" id="email"
+                                placeholder="Enter your email" required />
+                        </div>
+                        <button>
+                            <a href="#"
+                                class="lg:px-6 md:px-4 px-2 py-2 bg-gray-300 text-black font-semibold rounded-lg shadow-md  hover:bg-red-500 hover:text-white transition inline-flex items-center">
+                                SUBSCRIBE NOW
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between text-gray-200 text-sm mt-5">
+                    <p>Copyright © jkconstruction all rights reserved.</p>
+                    <p>Privacy Polocy | Terms & Condition</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- right-bottom chatBox -->
+    <script>
+        document.getElementById('chatToggle').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        document.getElementById('min-btn').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- mobile menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--  owl carousel (logo slider) -->
+    <script src="OwlCarousel2-2.3.4/js/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            // items: 4,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                425: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1024: {
+                    items: 4
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

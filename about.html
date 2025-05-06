@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About page</title>
+
+    <link rel="stylesheet" href="construction.css">
+
+    <!-- tailwind css 3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- flowbite js cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.js"
+        integrity="sha512-LThUFuq6Y8DTeSxG7VgJQu+3slKAhZ1u3z1EJdZESaVuQIEJ7TXC/DV8xNNEDFW01iWF4tUuzeC4RdiyrRPdRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- flowbite css cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.css"
+        integrity="sha512-aHc6FOiM/2Ko2Au1xqzHo++VfZGZI7cgUJptweRq1j2qrPF8UZdO+3MScBvQwPpclaxEDMBJ4bAuulsIz1Y8uA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!--  inter font-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Underdog&display=swap"
+        rel="stylesheet"> -->
+
+    <!-- Titillium font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Underdog&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-200">
+
+    <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
+        <div class="chat-box  bg-gray-100 p-2 rounded-md ">
+            <div class="top">
+                <div class="flex justify-between bg-gray-300 rounded-md">
+                    <div class="back-btn flex">
+                        <div><i class="fa-solid fa-arrow-left-long hover:bg-gray-400  p-2"></i></div>
+                        <div><i class="fa-solid fa-ellipsis  hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                    <div class="min-btn" id="min-btn">
+                        <div><i class="fa-solid fa-minus hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                </div>
+                <div class="flex mt-4 ">
+                    <div class="img overflow-hidden">
+                        <img class="rounded-full"
+                            src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740" alt="">
+                    </div>
+                    <div class="chat-text">
+                        <div class="bg-gray-200 p-1 text-sm rounded-md ml-2 mt-2">
+                            <p>Hi! What can I do for you?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="end bg-gray-800 hover:bg-gray-300 text-gray-100 hover:text-gray-800  text-center text-sm rounded-md p-2 mt-52"><a href="">Chat
+                        now</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div id="chatToggle" data-aos="fade-left" data-aos-duration="1500"
+            class="fixed-chat fixed bottom-20 border-gray-800  right-4 z-20 overflow-hidden rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800 w-14 h-14 cursor-pointer">
+            <img src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740" alt=""
+                class="w-full  h-full object-cover rounded-full">
+        </div>
+    </div>
+
+    <div class="scroll-btn overflow-hidden">
+        <div data-aos="fade-left" data-aos-duration="1500" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed-btn rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800  static-btn">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </div>
+
+    <header class="w-full shadow-md static-header">
+        <section class="hidden md:block">
+            <div class="bg-gray-600">
+                <div class="container mx-auto px-[15px] md:px-[36px] text-gray-100">
+                    <div class="flex items-center justify-between p-2">
+                        <div class="top-left">
+                            <a class="mail" href=""><i
+                                    class="fa-solid fa-envelope mr-2"></i>jkconstruction123@gmail.com</a>
+                        </div>
+                        <div class="top-center">
+                            <a href="call"><i class="fa-solid fa-phone mr-2"></i>+123 4567 890</a>
+                        </div>
+                        <div class="top-right">
+                            <div class="flex text-md">
+                                <a href=""><i class="fab fa-facebook-f mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-youtube mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-instagram mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fa-brands fa-whatsapp mr-2 hover:text-gray-800"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="bg-gray-800 text-gray-200  font-semibold text-xl ">
+            <div class="container mx-auto px-[15px] md:px-[36px]">
+                <div class="flex justify-between items-center ">
+                    <!-- Logo -->
+                    <div class=" logo ">
+                        <img src="img/jk.png" width="100%" alt="">
+                    </div>
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex space-x-6 items-center m-4 ">
+                        <li class="relative group">
+                            <a href="construction.html" class="hover:text-gray-400">Home</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Services <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0px] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Interior Design</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Home Renovations</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Architecture &
+                                        Building</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                About <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">About Us</a></li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Team</a></li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Blog <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Default</a></li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Grid</a></li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Post Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Project <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 1</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 2</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contect.html" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="hidden md:block m-2">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="construction.html" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a></li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Services</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Interior
+                                        Design</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Home
+                                        Renovations</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Architecture & Building</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">About</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">About
+                                        Us</a></li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Team</a>
+                                </li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">FAQ</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Blog</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Grid</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog Post
+                                        Details</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Project</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="contect.html" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section
+            class="relative w-full h-screen flex items-center justify-center text-white px-[15px] md:px-12 pt-28 pb-10 md:pb-14 lg:pb-28">
+            <div class="absolute  about-page inset-0">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="relative z-10 max-w-4xl p-[80px]">
+                <div class="head-text text-center lg:p-[40px]">
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold p-4 lg:p-4">About us</h1>
+                    <P class="md:text-base text-sm text-gray-200 ">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aliquam
+                        ultrices sapien vel quam luctus pulvinar.
+                    </P>
+                </div>
+            </div>
+        </section>
+
+        <div class="main xl:py-[80px] px-[15px]">
+            <div class="container mx-auto">
+                <div class="md:flex overflow-hidden ">
+                    <div data-aos="fade-right" data-aos-duration="1500"
+                        class="text w-full md:w-2/3 p-2 lg:p-4 border-3  rounded-md border-gray-800 ">
+                        <h2 class="text-xl pb-2 font-semibold">Our history</h2>
+                        <H1 class=" lg:text-2xl md:text-xl text-base font-semibold mb-2">BuildWall - to Deliver a
+                            Better World!
+                        </H1>
+                        <p class="lg:text-base text-sm ">BuildWall has a long and rich history in construction and
+                            building sphere. We started as a small company and have made a lot of efforts to become the
+                            leader in North America. We praize our clients and quality of work. We strictly follow the
+                            laws and safety rules, that is why we have become who we are. We welcome people to get
+                            aquanitance with our company, our history, team and projects we’ve made. BuildWall can
+                            create indeed great and durable objects. We will gladly do it right for you!</p>
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500"
+                        class="img w-full flex pb-2  justify-center  md:w-1/3">
+                        <img class=" border-3 rounded-md border-gray-800" src="img/oldmen.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="rank-section ">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="rank text-white">
+                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">87+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Happy Customers</p>
+                    </div>
+                    <div class="rank text-white ">
+                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">43+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Complete Work</p>
+                    </div>
+                    <div class="rank text-white">
+                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">57+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Our Award</p>
+                    </div>
+                    <div class="rank text-white">
+                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">48+</h1>
+                        <p class="font-semibold  text-base md:text-xl lg:text-2xl">Company Member</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategy & Mission Section -->
+        <div class="bg-gray-300 px-4 md:px-8 lg:px-20 py-10">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row md:gap-10 overflow-hidden">
+                    <!-- Strategy -->
+                    <div data-aos="fade-right" data-aos-duration="2000" class="md:w-1/2 w-full mb-10 md:mb-0">
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">Our Strategy</h1>
+
+                        <div class="mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold mb-2">Innovative Solutions and Ideas</h2>
+                            <p class="text-sm md:text-base text-slate-700">We constantly monitor innovations and
+                                implement the best in our work.</p>
+                        </div>
+                        <div class="mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold mb-2">Latest Technologies</h2>
+                            <p class="text-sm md:text-base text-slate-700">We use cutting-edge technology to ensure
+                                maximum efficiency and results.</p>
+                        </div>
+                        <div class="mb-6">
+                            <h2 class="text-lg md:text-xl font-semibold mb-2">Impressive Design Solutions</h2>
+                            <p class="text-sm md:text-base text-slate-700">Our designs are driven by innovation and
+                                customer satisfaction.</p>
+                        </div>
+                    </div>
+                    <!-- Mission -->
+                    <div data-aos="fade-left" data-aos-duration="2000" class="md:w-1/2 w-full">
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6">Our Mission</h1>
+                        <p class="text-sm md:text-base text-slate-700 mb-4">
+                            We aim to deliver top-notch solutions while maintaining integrity, sustainability, and
+                            excellence across all aspects of our work.
+                        </p>
+                        <p class="text-sm md:text-base text-slate-700">
+                            Our commitment to continuous learning and adaptability ensures we stay ahead in a
+                            fast-changing world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Testimonials Carousel Section -->
+        <div class="background-img bg-center md:p-20 px-4 py-12">
+            <div class="container mx-auto">
+                <div class="w-full relative" data-aos="fade-up">
+                    <!-- Slides Wrapper -->
+                    <div id="carousel" class="relative overflow-hidden">
+                        <!-- Slides -->
+                        <div class="carousel-slide flex transition-transform duration-700 ease-in-out"
+                            style="transform: translateX(0%)">
+                            <!-- Slide 1 -->
+                            <div class="min-w-full text-center px-4">
+                                <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4">
+                                    <img src="https://demo.themexbd.com/rtl/akin/wp-content/uploads/2021/09/team-1-1.jpg"
+                                        class="object-cover w-full h-full" alt="Rayhan Khan">
+                                </div>
+                                <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur,
+                                    reprehenderit porro neque eveniet cupiditate minus temporibus earum voluptates illo
+                                    nisi molestiae autem mollitia? Porro saepe ...
+                                </p>
+                                <hr class="w-16 border-2 border-gray-300 mx-auto mb-4">
+                                <h2 class="text-xl font-semibold text-white">Rayhan Khan</h2>
+                                <h3 class="text-sm text-gray-300">Project Manager</h3>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="min-w-full text-center px-4">
+                                <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4">
+                                    <img src="https://demo.themexbd.com/rtl/akin/wp-content/uploads/2021/09/team-2-1.jpg"
+                                        class="object-cover w-full h-full" alt="Metton Alex">
+                                </div>
+                                <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur,
+                                    reprehenderit porro neque eveniet cupiditate minus temporibus earum voluptates illo
+                                    nisi molestiae autem mollitia? Porro saepe animi placeat quaerat mollitia maxime
+                                    sapiente unde quas...
+                                </p>
+                                <hr class="w-16 border-2 border-gray-300 mx-auto mb-4">
+                                <h2 class="text-xl font-semibold text-white">Metton Alex</h2>
+                                <h3 class="text-sm text-gray-300">Construction Assistant</h3>
+                            </div>
+                            <div class="min-w-full text-center px-4">
+                                <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4">
+                                    <img src="https://ld-wp73.template-help.com/wordpress/prod_4439/v4/wp-content/uploads/2019/08/team-member-4.jpg"
+                                        class="object-cover w-full h-full" alt="Metton Alex">
+                                </div>
+                                <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur,
+                                    reprehenderit porro neque eveniet cupiditate minus temporibus earum voluptates illo
+                                    nisi molestiae autem mollitia? Porro saepe animi placeat quaerat mollitia maxime
+                                    sapiente unde quas...
+                                </p>
+                                <hr class="w-16 border-2 border-gray-300 mx-auto mb-4">
+                                <h2 class="text-xl font-semibold text-white">Luis Maxwell</h2>
+                                <h3 class="text-sm text-gray-300">Contractors Operations Head</h3>
+                            </div>
+                            <div class="min-w-full text-center px-4">
+                                <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4">
+                                    <img src="https://ld-wp73.template-help.com/wordpress/prod_4439/v4/wp-content/uploads/2019/08/team-member-5.jpg"
+                                        class="object-cover w-full h-full" alt="Metton Alex">
+                                </div>
+                                <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur,
+                                    reprehenderit porro neque eveniet cupiditate minus temporibus earum voluptates illo
+                                    nisi molestiae autem mollitia? Porro saepe animi placeat quaerat mollitia maxime
+                                    sapiente unde quas...
+                                </p>
+                                <hr class="w-16 border-2 border-gray-300 mx-auto mb-4">
+                                <h2 class="text-xl font-semibold text-white">Ken Ferguson</h2>
+                                <h3 class="text-sm text-gray-300">Chief Financial Officer</h3>
+                            </div>
+                            <div class="min-w-full text-center px-4">
+                                <div class="w-28 h-28 rounded-full overflow-hidden mx-auto mb-4">
+                                    <img src="https://ld-wp73.template-help.com/wordpress/prod_4439/v4/wp-content/uploads/2019/08/team-member-2.jpg"
+                                        class="object-cover w-full h-full" alt="Metton Alex">
+                                </div>
+                                <p class="text-gray-300 text-sm md:text-lg max-w-2xl mx-auto mb-4">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur,
+                                    reprehenderit porro neque eveniet cupiditate minus temporibus earum voluptates illo
+                                    nisi molestiae autem mollitia? Porro saepe animi placeat quaerat mollitia maxime
+                                    sapiente unde quas...
+                                </p>
+                                <hr class="w-16 border-2 border-gray-300 mx-auto mb-4">
+                                <h2 class="text-xl font-semibold text-white">Taylor Wilson</h2>
+                                <h3 class="text-sm text-gray-300">Construction Assistant</h3>
+                            </div>
+                        </div>
+                        <button id="prev"
+                            class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-gray-200 z-10">
+                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-width="2" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button id="next"
+                            class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white rounded-full p-2 hover:bg-gray-200 z-10">
+                            <svg class="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main xl:p-[80px] px-[15px] bg-gray-300">
+            <div class="container mx-auto">
+                <div class="md:flex gap-10 overflow-hidden">
+                    <div data-aos="fade-right" data-aos-duration="2000" class="img w-full mt-4 lg:w-2/5 ">
+                        <img src="https://thumbs.dreamstime.com/b/builders-team-construction-site-smiling-foreman-workers-protective-uniform-building-45214995.jpg"
+                            class="w-full rounded-md" alt="">
+                    </div>
+                    <div class="w-full lg:w-3/5 mb-4  " id="accordion-flush" data-accordion="collapse"
+                        data-active-classes="" data-inactive-classes="">
+                        <h1 data-aos="fade-left" data-aos-duration="800"
+                            class="text-xl lg:text-3xl md:text-xl font-semibold mb-2  p-3">Why choose us?</h1>
+                        <h2 data-aos="fade-left" data-aos-duration="1000" id="accordion-flush-heading-1">
+                            <button type="button"
+                                class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 rounded-t-lg border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
+                                data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
+                                aria-controls="accordion-flush-body-1">
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees have many years of
+                                    experience</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
+                            <div class="lg:p-5 md:p-4 p-2 text-gray-700 border-2 border-gray-800  ">
+                                <p class="mb-2 lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Autem
+                                    aspernatur,
+                                    error ratione repudiandae ad exercitationem aliquid quasi reprehenderit provident
+                                    praesentium quis nam nulla veritatis est perspiciatis libero iste quaerat dolore
+                                    optio?
+                                    Neque, error sint doloremque minima cumque laborum officia? Quasi deleniti adipisci
+                                    earum doloremque quidem aliquid tempore non, ea rerum, pariatur exercitationem natus
+                                    nam
+                                    id ipsum dolores reprehenderit atque minus ab praesentium eos accusamus nemo dolore
+                                    et
+                                    repellat. Sed facere temporibus, sapiente, voluptates quo totam mollitia architecto,
+                                    minima praesentium provident assumenda ut magnam. Sint, quam? Non nobis facere
+                                    veritatis
+                                    aliquam.</p>
+                            </div>
+                        </div>
+                        <h2 data-aos="fade-left" data-aos-duration="1400" id="accordion-flush-heading-2">
+                            <button type="button"
+                                class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2  border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
+                                data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
+                                aria-controls="accordion-flush-body-2">
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Quality construction continues after
+                                    the project</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+                            <div class="lg:p-5 md:p-4 p-2 text-gray-700 border-2 border-gray-800  ">
+                                <p class="mb-2 lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Autem
+                                    aspernatur,
+                                    error ratione repudiandae ad exercitationem aliquid quasi reprehenderit provident
+                                    praesentium quis nam nulla veritatis est perspiciatis libero iste quaerat dolore
+                                    optio?
+                                    Neque, error sint doloremque minima cumque laborum officia? Quasi deleniti adipisci
+                                    earum doloremque quidem aliquid tempore non, ea rerum, pariatur exercitationem natus
+                                    nam
+                                    id ipsum dolores reprehenderit atque minus ab praesentium eos accusamus nemo dolore
+                                    et
+                                    repellat. Sed facere temporibus, sapiente, voluptates quo totam mollitia architecto,
+                                    minima praesentium provident assumenda ut magnam. Sint, quam? Non nobis facere
+                                    veritatis
+                                    aliquam.</p>
+                            </div>
+                        </div>
+                        <h2 data-aos="fade-left" data-aos-duration="1900" id="accordion-flush-heading-3">
+                            <button type="button"
+                                class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
+                                data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                                aria-controls="accordion-flush-body-3">
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">We use technology to do the job more
+                                    quickly</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+                            <div class="lg:p-5 md:p-4 p-2 text-gray-700 border-2 border-gray-800  ">
+                                <p class="mb-2 lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Autem
+                                    aspernatur,
+                                    error ratione repudiandae ad exercitationem aliquid quasi reprehenderit provident
+                                    praesentium quis nam nulla veritatis est perspiciatis libero iste quaerat dolore
+                                    optio?
+                                    Neque, error sint doloremque minima cumque laborum officia? Quasi deleniti adipisci
+                                    earum doloremque quidem aliquid tempore non, ea rerum, pariatur exercitationem natus
+                                    nam
+                                    id ipsum dolores reprehenderit atque minus ab praesentium eos accusamus nemo dolore
+                                    et
+                                    repellat. Sed facere temporibus, sapiente, voluptates quo totam mollitia architecto,
+                                    minima praesentium provident assumenda ut magnam. Sint, quam? Non nobis facere
+                                    veritatis
+                                    aliquam.</p>
+                            </div>
+                        </div>
+                        <h2 data-aos="fade-left" data-aos-duration="2500" id="accordion-flush-heading-3">
+                            <button type="button"
+                                class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
+                                data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
+                                aria-controls="accordion-flush-body-3">
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees are continually trained on
+                                    safety issues</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                        </h2>
+                        <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
+                            <div class="lg:p-5 md:p-4 p-2 text-gray-700 border-2 border-gray-800  ">
+                                <p class="mb-2 lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Autem
+                                    aspernatur,
+                                    error ratione repudiandae ad exercitationem aliquid quasi reprehenderit provident
+                                    praesentium quis nam nulla veritatis est perspiciatis libero iste quaerat dolore
+                                    optio?
+                                    Neque, error sint doloremque minima cumque laborum officia? Quasi deleniti adipisci
+                                    earum doloremque quidem aliquid tempore non, ea rerum, pariatur exercitationem natus
+                                    nam
+                                    id ipsum dolores reprehenderit atque minus ab praesentium eos accusamus nemo dolore
+                                    et
+                                    repellat. Sed facere temporibus, sapiente, voluptates quo totam mollitia architecto,
+                                    minima praesentium provident assumenda ut magnam. Sint, quam? Non nobis facere
+                                    veritatis
+                                    aliquam.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main xl:p-[80px] px-[15px] overflow-hidden">
+            <div class="container mx-auto ">
+                <div class="md:flex ">
+                    <div class=" w-full lg:p-4 p-2">
+                        <h2 data-aos="fade-right" data-aos-duration="1500" class="text-xl pb-2 font-semibold">Excellence
+                            in Action</h2>
+                        <h1 data-aos="fade-right" data-aos-duration="1500"
+                            class="lg:text-4xl md:text-3xl text-2xl  font-semibold">Award Winning Excellence</h1>
+                        <img data-aos="fade-right" data-aos-duration="2000"
+                            src="https://www.pngplay.com/wp-content/uploads/9/JCB-Transparent-Background.png"
+                            class="w-full pt-[48px]" alt="">
+                    </div>
+                    <div data-aos="fade-left" data-aos-duration="1500" class="w-full lg:p-4 p-2">
+                        <div class="box1 bg-gray-100 hover:bg-gray-300 rounded-xl m-2 lg:p-4 p-2">
+                            <div class="trophy-box flex justify-between relative">
+                                <div class="text">
+                                    <h2 class="lg:text-2xl md:text-xl text-lg font-semibold mb-2">Construction
+                                        Innovation
+                                    </h2>
+                                    <h4 class="lg:text-base text-sm text-slate-700 mb-2">Design Awards – Innovation
+                                    </h4>
+                                </div>
+                                <div class="trophy  absolute w-32">
+                                    <img src="https://buildar.peacefulqode.co.in/wp-content/uploads/2025/01/award-004.webp"
+                                        alt="">
+                                </div>
+                                <div class="year">2010</div>
+                            </div>
+                        </div>
+                        <div class="box1 bg-gray-100 hover:bg-gray-300 rounded-xl m-2 lg:p-4 p-2">
+                            <div class="trophy-box flex justify-between relative">
+                                <div class="text">
+                                    <h2 class="lg:text-2xl md:text-xl text-lg font-semibold mb-2">Project Leadership
+                                    </h2>
+                                    <h4 class="lg:text-base text-sm text-slate-700 mb-2">Design Awards – Innovation
+                                    </h4>
+                                </div>
+                                <div class="trophy  absolute w-32">
+                                    <img src="https://buildar.peacefulqode.co.in/wp-content/uploads/2025/01/award-003.webp"
+                                        alt="">
+                                </div>
+                                <div class="year">2015</div>
+                            </div>
+                        </div>
+                        <div class="box1 bg-gray-100 hover:bg-gray-300 rounded-xl m-2 lg:p-4 p-2">
+                            <div class=" trophy-box flex justify-between relative ">
+                                <div class="text">
+                                    <h2 class="lg:text-2xl md:text-xl text-lg font-semibold mb-2">Engineering Mastery
+                                    </h2>
+                                    <h4 class="lg:text-base text-sm text-slate-700 mb-2">Design Awards – Innovation
+                                    </h4>
+                                </div>
+                                <div class="trophy  absolute w-32">
+                                    <img src="https://buildar.peacefulqode.co.in/wp-content/uploads/2025/01/award-002.webp"
+                                        alt="">
+                                </div>
+                                <div class="year">2020</div>
+                            </div>
+                        </div>
+                        <div class="box1 bg-gray-100 hover:bg-gray-300 rounded-xl m-2 lg:p-4 p-2">
+                            <div class=" trophy-box flex justify-between relative">
+                                <div class="text">
+                                    <h2 class="lg:text-2xl md:text-xl text-lg font-semibold mb-2">Innovative Design
+                                    </h2>
+                                    <h4 class="lg:text-base text-sm text-slate-700 mb-2">Design Awards – Innovation
+                                    </h4>
+                                </div>
+                                <div class="trophy  absolute w-32">
+                                    <img src="https://buildar.peacefulqode.co.in/wp-content/uploads/2025/01/award-001.webp"
+                                        alt="">
+                                </div>
+                                <div class="year">2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer bg-gray-800">
+            <div class="container mx-auto px-[15px] sm:px-10 md:px-[36px] pt-[60px] pb-[20px]">
+                <div class="flex flex-wrap justify-between gap-6 md:gap-0 md:flex-nowrap">
+                    <div class="footer-logo w-full md:w-1/3 text-left">
+                        <div class="logo">
+                            <img src="img/jk.png" class="mx-auto  md:w-full" alt="">
+                        </div>
+                        <div class="adress">
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">123, surat street,india</h4>
+                            </a>
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">+123 4567 890</h4>
+                            </a>
+                        </div>
+                        <div class="location-section text-[30px] text-gray-200  flex justify-left md:justify-start ">
+                            <i class="fa-brands fa-square-facebook m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-twitter m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-youtube m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-instagram m-2 hover:text-gray-500"></i>
+                        </div>
+                    </div>
+                    <div class="footer-text1 text-gray-200  w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Useful Links</h2>
+                        <a href="services.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i> Services</h4>
+                        </a>
+                        <a href="about.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>About</h4>
+                        </a>
+                        <a href="blog.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Blog</h4>
+                        </a>
+                        <a href="project.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Our project</h4>
+                        </a>
+                        <a href="contect.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Contact</h4>
+                        </a>
+                    </div>
+                    <div class="footer-text1 text-gray-200 w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Newsletter</h2>
+                        <h4>Applications produce before front-end portals visualize front-end</h4>
+                        <div class="my-4">
+                            <input class="w-full p-2  rounded-md text-gray-700" type="email" id="email"
+                                placeholder="Enter your email" required />
+                        </div>
+                        <button>
+                            <a href="#"
+                                class="lg:px-6 md:px-4 px-2 py-2 bg-gray-300 text-black font-semibold rounded-lg shadow-md  hover:bg-red-500 hover:text-white transition inline-flex items-center">
+                                SUBSCRIBE NOW
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between text-gray-200 text-sm mt-5">
+                    <p>Copyright © jkconstruction all rights reserved.</p>
+                    <p>Privacy Polocy | Terms & Condition</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+     <!-- right-bottom chatBox -->
+     <script>
+        document.getElementById('chatToggle').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+     <script>
+        document.getElementById('min-btn').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+
+      <!-- mobile menu -->
+      <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- JavaScript Carousel (our member) -->
+    <script>
+        const carousel = document.querySelector(".carousel-slide");
+        const slides = document.querySelectorAll(".carousel-slide > div");
+        let index = 0;
+
+        document.getElementById("next").addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        });
+
+        document.getElementById("prev").addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        });
+    </script>
+
+    <!-- aos animation  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

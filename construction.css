@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-family: "Inter", sans-serif; */
+    font-family: "Titillium Web", sans-serif;
+}
+
+
+/* header menu */
+.sub-menu1 {
+    width: auto;
+    /* display: none; */
+    visibility: hidden;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #3b4d66;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.5s ease-in-out ;
+    opacity: 0;
+    position: absolute;
+    transform: translateY(10px);
+}
+.menu2 li:hover .sub-menu1 {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.menu3 li:hover .sub-menu1 {
+    display: block;
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+}
+.menu2 {
+    display: flex;
+    position: relative;
+}
+.menu3 {
+    display: flex;
+    position: relative;
+}
+.sub-menu1 li{
+    transition: 0.5s;
+}
+.sub-menu1 li:hover{
+    background-color: #1F2937;
+    padding: 8px;
+    border-radius: 5px;
+    letter-spacing: 1px; 
+}
+ .menu4 li:hover .sub-menu1{
+    margin-top: -40px;
+    margin-left: 80px;
+    opacity: 1;
+    visibility: visible;
+    /* transform: translateX(10px); */
+}
+
+
+/* logo size */
+.logo {
+    width: 160px;
+    min-width: 160px;
+}
+
+
+/* header position */
+.static-header {
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/* home pagw last section-slider */
+.slider-container {
+    padding: 50px 0;
+}
+
+
+/* about page youtube-video */
+.video {
+    width: 80%;
+    height: 100px;
+}
+
+
+/* Home first-page bg-img */
+.home-page {
+    width: 100%;
+    height: auto;
+    /* background-image: url(https://hub.unitrade.com.my/wp-content/uploads/2023/06/unitrade-3.jpg); */
+    background-image: url(https://psicotecnicocadiz.es/wp-content/uploads/2020/05/psicotecnico-cadiz-operador-grua.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(40%);
+}
+
+
+/* service first-page bg-img */
+.service-page {
+    width: 100%;
+    height: auto;
+    background-image: url(https://www.drpoulinconstruction.net/wp-content/uploads/2021/03/iStock-1001996836-1-980x653.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(40%);
+}
+
+
+/*  about first-page bg-img */
+.about-page {
+    width: 100%;
+    height: auto;
+    background-image: url(https://www.advisoryexcellence.com/wp-content/uploads/2021/01/Construction-Engineering-1920x1066-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(40%);
+}
+
+
+/* blog first-page bg-img */
+.blog-page {
+    width: 100%;
+    height: auto;
+    background-image: url(https://blog.redribbon.co/hubfs/AdobeStock_557297624.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(40%);
+}
+
+
+/* project first-page bg-img */
+.project {
+    width: 100%;
+    height: auto;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/000/544/223/original/white-abstract-background-vector-gray-abstract-modern-design-background-for-report-and-project-presentation-template-vector-illustration-graphic-futuristic-and-circular-curve-shape.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /* filter: brightness(50%); */
+}
+
+
+/* contect first-page bg-img */
+.contect {
+    width: 100%;
+    height: auto;
+    background-image: url(https://static.vecteezy.com/system/resources/previews/018/973/855/large_2x/construction-worker-team-hands-shaking-greeting-start-up-plan-new-project-contract-in-office-center-at-construction-site-industry-architecture-partner-teamwork-agreement-property-contacts-free-photo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+
+
+/* work/award/member  */
+.rank-section {
+    padding: 80px 0;
+}
+.rank-section {
+    width: 100%;
+    height: auto;
+    background-image: url(https://cdn.pixabay.com/photo/2013/10/19/09/34/roof-197847_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* pricing card bg-img */
+.pricing-section {
+    width: 100%;
+    height: auto;
+    background-image: url(https://avatars.mds.yandex.net/i?id=cd8b88a83c5693a8d882db048de20842_l-4032520-images-thumbs&ref=rim&n=13&w=3000&h=2000);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* contect page map */
+.map {
+    width: 100%;
+    height: 500px;
+}
+
+
+/* project image  */
+.effect {
+    position: relative;
+    width: 100%;
+  }
+
+  
+  /* home page future project section */
+   .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); 
+    color: #363636;
+    /* border-radius: 0 0 px 15px; */
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  .effect:hover .overlay {
+    opacity: 1;
+  }
+
+
+  /* team member bg-img */
+  .background-img{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(https://image.cnbcfm.com/api/v1/image/107155947-1669153890614-gettyimages-1443652535-dsc_3811_961e4367-653b-4fc8-98b1-ec6ad5880e5a.jpeg?v=1691748001&w=1920&h=1080);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .img-circle{
+    width:100px ;
+    height: 100px;
+  }
+
+
+  /* owl carousel slider button */
+  .owl-theme .owl-nav .owl-prev, .owl-theme .owl-nav .owl-next{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(207, 207, 207) !important; 
+  }
+  .owl-theme .owl-nav .owl-prev:hover, .owl-theme .owl-nav .owl-next:hover{
+    background-color: rgb(82, 82, 82) !important;
+  }
+
+ .trophy{
+    right: 150px;
+    top: -60px;
+    scale: 0;
+    opacity: 0;
+    transition: 0.3s;
+ }
+ .box1:hover .trophy{
+    scale: 1;
+    opacity: 1;
+    rotate: 21deg;
+ }
+ .fixed-btn {
+    width: 50px;
+    height: 50px;
+}
+.static-btn {
+    position: fixed;
+    bottom: 15px;
+    right: 19px;
+    z-index: 1000;
+}
+.fixed-chat {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+.static-chat {
+    position: fixed;
+    bottom:70px;
+    right: 15px;
+    z-index: 1000;
+}
+.chat-box {
+    width: 400;
+    height: 350px;
+}
+.chat-box {
+    position: fixed;
+    bottom:140px;
+    right: 15px;
+    z-index: 1000;
+}
+.chat-box .flex .img{
+    width: 30px;
+}

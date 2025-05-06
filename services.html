@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+
+    <link rel="stylesheet" href="construction.css">
+
+    <!-- tailwind css 3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font-awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- flowbite js cdn link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.js"
+        integrity="sha512-LThUFuq6Y8DTeSxG7VgJQu+3slKAhZ1u3z1EJdZESaVuQIEJ7TXC/DV8xNNEDFW01iWF4tUuzeC4RdiyrRPdRw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- flowbite css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.5.2/flowbite.css"
+        integrity="sha512-aHc6FOiM/2Ko2Au1xqzHo++VfZGZI7cgUJptweRq1j2qrPF8UZdO+3MScBvQwPpclaxEDMBJ4bAuulsIz1Y8uA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- inter fonts-->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Underdog&display=swap"
+        rel="stylesheet"> -->
+
+    <!-- Titillium fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Grey+Qo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,500&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Underdog&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-200">
+
+    <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
+        <div class="chat-box  bg-gray-100 p-2 rounded-md ">
+            <div class="top">
+                <div class="flex justify-between bg-gray-300 rounded-md">
+                    <div class="back-btn flex">
+                        <div><i class="fa-solid fa-arrow-left-long hover:bg-gray-400  p-2"></i></div>
+                        <div><i class="fa-solid fa-ellipsis  hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                    <div class="min-btn" id="min-btn">
+                        <div><i class="fa-solid fa-minus hover:bg-gray-400  p-2"></i></div>
+                    </div>
+                </div>
+                <div class="flex mt-4 ">
+                    <div class="img overflow-hidden">
+                        <img class="rounded-full"
+                            src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                            alt="">
+                    </div>
+                    <div class="chat-text">
+                        <div class="bg-gray-200 p-1 text-sm rounded-md ml-2 mt-2">
+                            <p>Hi! What can I do for you?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div
+                    class="end bg-gray-800 hover:bg-gray-300 text-gray-100 hover:text-gray-800  text-center text-sm rounded-md p-2 mt-52">
+                    <a href="">Chat
+                        now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overflow-hidden">
+        <div id="chatToggle" data-aos="fade-left" data-aos-duration="1500"
+            class="fixed-chat fixed bottom-20 border-gray-800  right-4 z-20 overflow-hidden rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800 w-14 h-14 cursor-pointer">
+            <img src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                alt="" class="w-full  h-full object-cover rounded-full">
+        </div>
+    </div>
+
+    <div class="scroll-btn overflow-hidden">
+        <div data-aos="fade-left" data-aos-duration="1500" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed-btn rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800  static-btn">
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </div>
+
+
+    <header class="w-full shadow-md static-header">
+        <section class="hidden md:block">
+            <div class="bg-gray-600">
+                <div class="container mx-auto px-[15px] md:px-[36px] text-gray-100">
+                    <div class="flex items-center justify-between p-2">
+                        <div class="top-left">
+                            <a class="mail" href=""><i
+                                    class="fa-solid fa-envelope mr-2"></i>jkconstruction123@gmail.com</a>
+                        </div>
+                        <div class="top-center">
+                            <a href="call"><i class="fa-solid fa-phone mr-2"></i>+123 4567 890</a>
+                        </div>
+                        <div class="top-right">
+                            <div class="flex text-md">
+                                <a href=""><i class="fab fa-facebook-f mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-youtube mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fab fa-instagram mr-2 hover:text-gray-800"></i></a>
+                                <a href=""><i class="fa-brands fa-whatsapp mr-2 hover:text-gray-800"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <nav class="bg-gray-800 text-gray-200  font-semibold text-xl ">
+            <div class="container mx-auto px-[15px] md:px-[36px]">
+                <div class="flex justify-between items-center ">
+                    <!-- Logo -->
+                    <div class=" logo ">
+                        <img src="img/jk.png" width="100%" alt="">
+                    </div>
+                    <!-- Desktop Menu -->
+                    <ul class="hidden md:flex space-x-6 items-center m-4 ">
+                        <li class="relative group">
+                            <a href="construction.html" class="hover:text-gray-400">Home</a>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Services <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0px] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Interior
+                                        Design</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Home
+                                        Renovations</a>
+                                </li>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Architecture &
+                                        Building</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                About <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">About Us</a>
+                                </li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Team</a></li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Blog <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Grid</a>
+                                </li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Post
+                                        Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group">
+                            <a href="" class="hover:text-gray-400 flex items-center gap-1">
+                                Project <i class="fa-solid fa-angle-down text-sm"></i>
+                            </a>
+                            <ul
+                                class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contect.html" class="hover:text-gray-400">Contact</a></li>
+                    </ul>
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </div>
+                    <div class="hidden md:block m-2">
+                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="construction.html" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a></li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Services</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Construction
+                                        Consultation</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Interior
+                                        Design</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Home
+                                        Renovations</a></li>
+                                <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Building
+                                        Engineering</a></li>
+                                <li><a href="services.html"
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Architecture & Building</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">About</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">About
+                                        Us</a></li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Team</a>
+                                </li>
+                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">FAQ</a>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Blog</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                        Grid</a></li>
+                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog Post
+                                        Details</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="bg-gray-800 rounded">
+                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Project</summary>
+                            <ul class="pl-4 pb-2">
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                        3</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="contect.html" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section
+            class="relative w-full h-screen flex items-center justify-center text-white px-[15px] md:px-12 pt-28 pb-10 md:pb-14 lg:pb-28">
+            <div class="absolute  service-page inset-0">
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1500" class="relative z-10 max-w-4xl p-[80px]">
+                <div class="head-text text-center lg:p-[40px]">
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold p-4 lg:p-4">Our service</h1>
+                    <P class="md:text-base text-sm text-gray-200 ">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Aliquam
+                        ultrices sapien vel quam luctus pulvinar.
+                    </P>
+                </div>
+            </div>
+        </section>
+
+        <div class="main px-[15px] lg:py-[80px]">
+            <div class="container mx-auto ">
+                <div data-aos="zoom-in-up" data-aos-duration="2000" class="head-text  text-center lg:pb-[40px]">
+                    <h3 class="text-lg m-2">Provide Service</h3>
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold ">Interested in Our Services</h1>
+                </div>
+                <div class="provide-service-sec">
+                    <div class="flex flex-wrap  justify-content-center">
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class=" p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10  hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-couch text-[40px]"></i> -->
+                                <p class="text-xl font-bold">
+                                    Flooring & Roofing</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10  hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-lightbulb text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Repair & Expand</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10  hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-house-chimney text-[40px]"></i> -->
+                                <p class="text-xl font-bold">
+                                    Interior Design</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2400"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-pen-ruler text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Priject Planning</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2400"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-city text-[40px]"></i> -->
+                                <p class="text-xl font-bold">General Contract</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2400"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-couch text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Furniture & Décor</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2800"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-couch text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Home Renovation</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2800"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-couch text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Building Engineering</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2800"
+                            class="p-4 md:p-2 md:w-6/12 lg:w-4/12 w-full text-center ">
+                            <div
+                                class="bg-gray-50 hover:bg-gray-100 delay-400 rounded-xl px-4 py-10 hover:scale-75  duration-700 border-2 hover:border-gray-500">
+                                <!-- <i class="fa-solid fa-couch text-[40px]"></i> -->
+                                <p class="text-xl font-bold">Architectural & Building</p>
+                                <p class="md:text-base text-sm text-slate-700 m-2">We are work closely with ents to gain
+                                    an
+                                    understanding of desires both philoso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main  xl:pt-[80px]">
+            <div class="container  mx-auto ">
+                <div class="pricing-section px-[15px] lg:py-8">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" class="pricing-title text-white  text-center">
+                        <h3 class="text-lg m-2">Pricing Plan</h3>
+                        <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold mb-6 block">Small Pricing Plan For
+                            Your<br>
+                            Creative Business
+                        </h1>
+                    </div>
+                    <div class="pricing-card flex flex-wrap ">
+                        <div data-aos="zoom-in-up" data-aos-duration="800"
+                            class="py-4 p-[50px] md:w-6/12 lg:w-4/12 w-full ">
+                            <div
+                                class="rounded-xl bg-gray-50 ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="rating  lg:p-4 p-2 text-center">
+                                    <h1 class="text-lg  text-gray-700">Basic(Weekly)</h1>
+                                    <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold ">$ 390</h3>
+                                    <h6>Per square</h6>
+                                </div>
+                                <hr height="2px" color="black">
+                                <h3 class="text-lg font-semibold lg:m-4 m-2">What's includes?</h3>
+                                <div class="facilities  rounded-b-lg ">
+                                    <ul class="md:text-base text-sm text-slate-700 m-2">
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Powerfull Team</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Art &
+                                                Design</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Architecture project</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>4 People
+                                                at Work</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>7 Hours
+                                                Calling</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Planning
+                                                Solution</a></li>
+                                        <div class="button lg:m-4 m-2">
+                                            <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mb-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                href="contect.html">Buy Now </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="zoom-in-up" data-aos-duration="1300"
+                            class="py-4 p-[50px] md:w-6/12 lg:w-4/12 w-full">
+                            <div
+                                class="rounded-xl bg-gray-50 ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="rating  lg:p-4 p-2 text-center">
+                                    <h1 class="text-lg  text-gray-700">Basic(Weekly)</h1>
+                                    <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold ">$ 590</h3>
+                                    <h6>Per square</h6>
+                                </div>
+                                <hr height="2px" color="black">
+                                <h3 class="text-lg font-semibold lg:m-4 m-2">What's includes?</h3>
+                                <div class="facilities  rounded-b-lg ">
+                                    <ul class="md:text-base text-sm text-slate-700 m-2">
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Powerfull Team</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Art &
+                                                Design</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Architecture project</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>4 People
+                                                at Work</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>7 Hours
+                                                Calling</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Planning
+                                                Solution</a></li>
+                                        <div class="button lg:m-4 m-2">
+                                            <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mb-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                href="contect.html">Buy Now </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="zoom-in-up" data-aos-duration="1800"
+                            class="py-4 p-[50px] md:w-6/12 lg:w-4/12 w-full">
+                            <div
+                                class="rounded-xl bg-gray-50 ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
+                                <div class="rating  lg:p-4 p-2 text-center">
+                                    <h1 class="text-lg  text-gray-700">Basic(Weekly)</h1>
+                                    <h3 class="lg:text-4xl md:text-3xl text-2xl font-bold ">$ 790</h3>
+                                    <h6>Per square</h6>
+                                </div>
+                                <hr height="2px" color="black">
+                                <h3 class="text-lg font-semibold lg:m-4 m-2">What's includes?</h3>
+                                <div class="facilities  rounded-b-lg ">
+                                    <ul class="md:text-base text-sm text-slate-700 m-2">
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Powerfull Team</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Art &
+                                                Design</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i
+                                                    class="fa-solid fa-check mr-2"></i>Architecture project</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>4 People
+                                                at Work</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>7 Hours
+                                                Calling</a></li>
+                                        <li class="lg:m-4 m-2"><a href=""><i class="fa-solid fa-check mr-2"></i>Planning
+                                                Solution</a></li>
+                                        <div class="button lg:m-4 m-2">
+                                            <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mb-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                                href="contect.html">Buy Now </a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main px-[15px] xl:pt-[80px]">
+            <div class="container  mx-auto ">
+                <div class="service-section">
+                    <div data-aos="zoom-in-up" data-aos-duration="2000" class="service-title text-center">
+                        <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold pb-6 block"> Our More Services
+                        </h1>
+                    </div>
+                    <div class="flex flex-wrap lg:py-8">
+                        <div data-aos="fade-up" data-aos-duration="2000" class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                            <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                <div class="card-img overflow-hidden">
+                                    <figure><img
+                                            src="https://avatars.mds.yandex.net/i?id=6a7759ed507a3b56c04aa88fc9b2915db9588e06-2352855-images-thumbs&n=13"
+                                            class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+                                            alt="..."></figure>
+                                </div>
+                                <div class="lg:p-4 p-[15px]">
+                                    <h5 class="lg:text-xl text-lg font-bold mb-2">Our history</h5>
+                                    <p class="text-gray-700 lg:text-base text-sm mb-3 ">We work for years and have
+                                        gained a reputation of credible and reliable company. We managed to expand our
+                                        activity throughout North America and have some offices overseas. Structon has a
+                                        long and interesting history..</p>
+                                    <div class="button">
+                                        <a class="lg:px-6  md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                            href="#">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000" class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                            <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                <div class="card-img overflow-hidden">
+                                    <figure><img
+                                            src="https://i.pinimg.com/400x300/06/b6/07/06b607d2c05ccfaaf02bc918119570c4.jpg"
+                                            class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+                                            alt="..."></figure>
+                                </div>
+                                <div class="lg:p-4 p-[15px]">
+                                    <h5 class="lg:text-xl text-lg font-bold mb-2">Modern techology
+                                    </h5>
+                                    <p class="text-gray-700 lg:text-base text-sm mb-3">We work for years and have gained
+                                        a reputation of credible and reliable company. We managed to expand our activity
+                                        throughout North America and have some offices overseas. Structon has a long and
+                                        interesting history.</p>
+                                    <div class="button">
+                                        <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                            href="#">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-aos="fade-up" data-aos-duration="2000" class="py-4 md:p-4 md:w-6/12 lg:w-4/12 w-full">
+                            <div class="bg-white shadow-lg rounded-lg overflow-hidden card">
+                                <div class="card-img overflow-hidden">
+                                    <figure><img
+                                            src="https://avatars.mds.yandex.net/i?id=24e1d6c733850b5f15dd74df520f1777b607e9ee-9598980-images-thumbs&n=13"
+                                            class="w-full ease-in-out hover:-translate-y-1 hover:scale-110 duration-300"
+                                            alt="..."></figure>
+                                </div>
+                                <div class="lg:p-4 p-[15px]">
+                                    <h5 class="lg:text-xl text-lg font-bold mb-2">Professional teamwork</h5>
+                                    <p class="text-gray-700 lg:text-base text-sm mb-3">We work for years and have gained
+                                        a reputation of credible and reliable company. We managed to expand our activity
+                                        throughout North America and have some offices overseas. Structon has a long and
+                                        interesting history.</p>
+                                    <div class="button">
+                                        <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 mt-4 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 rounded-lg  "
+                                            href="#">Know More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main px-[15px] py-[80px]">
+            <div class="container mx-auto">
+                <div data-aos="zoom-in-up" data-aos-duration="1000" class="pricing-title text-gray-800  text-center">
+                    <h3 class="text-lg m-2">Project Plan</h3>
+                    <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold mb-[70px] block">Project Plan For
+                        Your<br>
+                        Creative Business
+                    </h1>
+                </div>
+                <div class="gallery-section overflow-hidden">
+                    <div class="first lg:flex ">
+                        <div class="image lg:w-1/2 w-full  ">
+                            <img src="img/gallery5.jpg" alt="">
+                        </div>
+                        <div class="text lg:w-1/2 w-full bg-gray-300 p-2   xl:p-4  lg:p-2  ">
+                            <div data-aos="fade-left" data-aos-duration="1500">
+                                <h1 class="lg:text-2xl md:text-xl text-base  font-semibold lg:pt-2 lg:pb-2 ">COMMERCIAL
+                                </h1>
+                                <p class="md:text-base text-sm ">Over the years we’ve been working on many commercial
+                                    buildings, including but not limited to shopping malls. office buildings and
+                                    company’s
+                                    HQs… Trust us and you’ll not be disappointed!Our service includes working on new
+                                    constructions, doing additions or building, infrastructure renovations, site
+                                    assessment,
+                                    master planning and major expansions for a variety of sectors including public,
+                                    cultural, education, non-profit, commercial, restoration and residential
+                                    construction.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-section overflow-hidden">
+                    <div class="second lg:flex ">
+                        <div class="text lg:w-1/2 w-full bg-gray-400 p-2   xl:p-4  lg:p-2 ">
+                            <div data-aos="fade-right" data-aos-duration="1500">
+                                <h1 class="lg:text-2xl md:text-xl text-base  font-semibold lg:pt-2 lg:pb-2">RESIDENTIAL
+                                </h1>
+                                <p class="md:text-base text-sm ">Every member of our team is seasoned at designing and
+                                    building a residential cottage. big house or a high-rise – whatever type of a
+                                    residential building you’ll tell us to build! One thing to know about our work
+                                    philosophy is that we incorporate all the necessary elements, adjusting them for all
+                                    sides of the construction process. That way, at the end of the day everyone stays
+                                    satisfied. Still first and foremost, we’re client-centric…</p>
+                            </div>
+                        </div>
+                        <div class="image lg:w-1/2 w-full  ">
+                            <img src="img/gallery2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-section overflow-hidden">
+                    <div class="third lg:flex ">
+                        <div class="image lg:w-1/2 w-full  ">
+                            <img src="img/gallery3.jpg" alt="">
+                        </div>
+                        <div class="text lg:w-1/2 w-full bg-gray-300 p-2   xl:p-4  lg:p-2 ">
+                            <div data-aos="fade-left" data-aos-duration="1500">
+                                <h1 class="lg:text-2xl md:text-xl text-base  font-semibold lg:pt-2 lg:pb-2 ">INDUSTRIAL
+                                </h1>
+                                <p class="md:text-base text-sm ">We’re handy at completing a warehouse, an auxiliary
+                                    factory
+                                    plant building or any other industrial-grade building. We always finish the job on
+                                    time
+                                    and on the budget! We know that a majority of projects require a profound amount of
+                                    engineering to be performed. Our team includes more than 30 experienced construction
+                                    engineers, whose expertise and skills can assure any project’s swift accomplishment!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer bg-gray-800">
+            <div class="container mx-auto px-[15px] sm:px-10 md:px-[36px] pt-[60px] pb-[20px]">
+                <div class="flex flex-wrap justify-between gap-6 md:gap-0 md:flex-nowrap">
+                    <div class="footer-logo w-full md:w-1/3 text-left">
+                        <div class="logo">
+                            <img src="img/jk.png" class="mx-auto  md:w-full" alt="">
+                        </div>
+                        <div class="adress">
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">123, surat street,india</h4>
+                            </a>
+                            <a href="contect.html">
+                                <h4 class="text-gray-200 mb-2">+123 4567 890</h4>
+                            </a>
+                        </div>
+                        <div class="location-section text-[30px] text-gray-200  flex justify-left md:justify-start ">
+                            <i class="fa-brands fa-square-facebook m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-twitter m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-youtube m-2 hover:text-gray-500"></i>
+                            <i class="fa-brands fa-square-instagram m-2 hover:text-gray-500"></i>
+                        </div>
+                    </div>
+                    <div class="footer-text1 text-gray-200  w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Useful Links</h2>
+                        <a href="services.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i> Services</h4>
+                        </a>
+                        <a href="about.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>About</h4>
+                        </a>
+                        <a href="blog.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Blog</h4>
+                        </a>
+                        <a href="project.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Our project</h4>
+                        </a>
+                        <a href="contect.html">
+                            <h4 class="hover:text-gray-400 mb-2 hover:translate-x-4  hover:duration-700	"><i
+                                    class="fa-solid fa-hand-point-right mr-2"></i>Contact</h4>
+                        </a>
+                    </div>
+                    <div class="footer-text1 text-gray-200 w-full md:w-1/3 text-left">
+                        <h2 class="text-2xl font-bold mb-2">Newsletter</h2>
+                        <h4>Applications produce before front-end portals visualize front-end</h4>
+                        <div class="my-4">
+                            <input class="w-full p-2  rounded-md text-gray-700" type="email" id="email"
+                                placeholder="Enter your email" required />
+                        </div>
+                        <button>
+                            <a href="#"
+                                class="lg:px-6 md:px-4 px-2 py-2 bg-gray-300 text-black font-semibold rounded-lg shadow-md  hover:bg-red-500 hover:text-white transition inline-flex items-center">
+                                SUBSCRIBE NOW
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex justify-between text-gray-200 text-sm mt-5">
+                    <p>Copyright © jkconstruction all rights reserved.</p>
+                    <p>Privacy Polocy | Terms & Condition</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- right-bottom chatBox -->
+    <script>
+        document.getElementById('chatToggle').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        document.getElementById('min-btn').addEventListener('click', function () {
+            const chatBox = document.getElementById('chatBox');
+            chatBox.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- mobile menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- aos animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
