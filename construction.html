@@ -49,6 +49,7 @@
 </head>
 
 <body class="bg-gray-200">
+
     <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
         <div class="chat-box  bg-gray-100 p-2 rounded-md ">
             <div class="top">
@@ -596,52 +597,55 @@
         <div class="main bg-gray-300  ">
             <div class="project-section mx-[15px] lg:py-[80px]">
                 <div class="container mx-auto px-[15px] md:px-[36px]  overflow-hidden">
-                    <div class="text-center xl:mb-4 md:mb-2 m-2">
-                        <h3 class="lg:text-4xl md:text-3xl text-gray-800 text-2xl font-semibold block">Our Project
-                    </div>
-                    <div class="your-project">
-                        <div class="flex flex-wrap gap-3 justify-center mb-8">
-                            <button onclick="filterProjects('all')"
-                                class="border-2 border-gray-800  text-gray-200 bg-gray-800 hover:bg-gray-200 hover:text-gray-800 px-4 py-2 rounded">All</button>
-                            <button onclick="filterProjects('renovation')"
-                                class=" border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded ">Renovation</button>
-                            <button onclick="filterProjects('garden')"
-                                class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded">Garden</button>
-                            <button onclick="filterProjects('interior')"
-                                class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded">Interior</button>
-                            <button onclick="filterProjects('office')"
-                                class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded ">Office</button>
+                    <div class="main">
+                        <div data-aos="fade-up" data-aos-duration="2000" class="service-title text-center">
+                            <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold pb-6 block">Our Project
+                            </h1>
                         </div>
+                        <div  class="your-project">
+                            <div data-aos="fade-up" data-aos-duration="2000" class="flex flex-wrap gap-3 justify-center mb-8">
+                                <button onclick="filterProjects('all')"
+                                    class="border-2 border-gray-800  text-gray-200 bg-gray-800 hover:bg-gray-200 hover:text-gray-800 px-4 py-2 rounded">All</button>
+                                <button onclick="filterProjects('renovation')"
+                                    class=" border-2 border-gray-800 text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded ">Renovation</button>
+                                <button onclick="filterProjects('garden')"
+                                    class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded">Garden</button>
+                                <button onclick="filterProjects('interior')"
+                                    class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded">Interior</button>
+                                <button onclick="filterProjects('office')"
+                                    class="border-2 border-gray-800  text-gray-800 hover:text-gray-200  hover:bg-gray-800 px-4 py-2 rounded ">Office</button>
+                            </div>
 
-                        <!-- Project Gallery -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                            <div class="project-item" data-category="renovation">
-                                <img src="https://avatars.dzeninfra.ru/get-zen_doc/27036/pub_5c7fe40224917c00b4d2178a_5c7fe46a24917c00b4d21792/scale_1200"
-                                    class="w-full rounded shadow" alt="">
-                            </div>
-                            <div class="project-item" data-category="garden">
-                                <img src="https://i.pinimg.com/736x/0b/ca/b0/0bcab0ac361f57e681e30bf7c782985d.jpg"
-                                    class="w-full rounded shadow" alt="">
-                            </div>
-                            <div class="project-item" data-category="interior">
-                                <img src="https://paliwalinteriors.com/wp-content/uploads/2023/01/Interior-design-1.png"
-                                    class="w-full rounded shadow" alt="">
-                            </div>
-                            <div class="project-item" data-category="office">
-                                <img src="https://dewaperedamruangan.com/wp-content/uploads/2020/01/Peredam-Suara-Ruangan-direksi-9.jpg"
-                                    class="w-full rounded shadow" alt="">
-                            </div>
-                            <div class="project-item" data-category="renovation">
-                                <img src="https://i.pinimg.com/736x/27/05/a5/2705a5eb287e33b7ad06c2c4e57183b8.jpg"
-                                    class="w-full rounded shadow" alt="">
-                            </div>
-                            <div class="project-item" data-category="garden">
-                                <img src="https://www.goodeck.ru/images/goodeck/blog/JUL_P_1/SEP_/pryamo02.jpg"
-                                    class="w-full rounded shadow" alt="">
+                            <!-- Project Gallery -->
+                            <div data-aos="fade-up" data-aos-duration="2000" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                                <div class="project-item" data-category="renovation">
+                                    <img src="https://avatars.dzeninfra.ru/get-zen_doc/27036/pub_5c7fe40224917c00b4d2178a_5c7fe46a24917c00b4d21792/scale_1200"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
+                                <div class="project-item" data-category="garden">
+                                    <img src="https://i.pinimg.com/736x/0b/ca/b0/0bcab0ac361f57e681e30bf7c782985d.jpg"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
+                                <div class="project-item" data-category="interior">
+                                    <img src="https://paliwalinteriors.com/wp-content/uploads/2023/01/Interior-design-1.png"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
+                                <div class="project-item" data-category="office">
+                                    <img src="https://dewaperedamruangan.com/wp-content/uploads/2020/01/Peredam-Suara-Ruangan-direksi-9.jpg"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
+                                <div class="project-item" data-category="renovation">
+                                    <img src="https://i.pinimg.com/736x/27/05/a5/2705a5eb287e33b7ad06c2c4e57183b8.jpg"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
+                                <div class="project-item" data-category="garden">
+                                    <img src="https://www.goodeck.ru/images/goodeck/blog/JUL_P_1/SEP_/pryamo02.jpg"
+                                        class="w-full rounded shadow" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="button flex justify-center  lg:mt-4 md:mt-2 mt-2">
+                    <div data-aos="fade-up" data-aos-duration="2000" class="button flex justify-center  lg:mt-4 md:mt-2 mt-2">
                         <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200 hover:bg-gray-800 rounded-lg  "
                             href="project.html">More project</a>
                     </div>
