@@ -602,8 +602,9 @@
                             <h1 class="lg:text-4xl md:text-3xl text-2xl font-semibold pb-6 block">Our Project
                             </h1>
                         </div>
-                        <div  class="your-project">
-                            <div data-aos="fade-up" data-aos-duration="2000" class="flex flex-wrap gap-3 justify-center mb-8">
+                        <div class="your-project">
+                            <div data-aos="fade-up" data-aos-duration="2000"
+                                class="flex flex-wrap gap-3 justify-center mb-8">
                                 <button onclick="filterProjects('all')"
                                     class="border-2 border-gray-800  text-gray-200 bg-gray-800 hover:bg-gray-200 hover:text-gray-800 px-4 py-2 rounded">All</button>
                                 <button onclick="filterProjects('renovation')"
@@ -617,7 +618,8 @@
                             </div>
 
                             <!-- Project Gallery -->
-                            <div data-aos="fade-up" data-aos-duration="2000" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                            <div data-aos="fade-up" data-aos-duration="2000"
+                                class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                                 <div class="project-item" data-category="renovation">
                                     <img src="https://avatars.dzeninfra.ru/get-zen_doc/27036/pub_5c7fe40224917c00b4d2178a_5c7fe46a24917c00b4d21792/scale_1200"
                                         class="w-full rounded shadow" alt="">
@@ -645,7 +647,7 @@
                             </div>
                         </div>
                     </div>
-                    <div data-aos="fade-up" data-aos-duration="2000" class="button flex justify-center  lg:mt-4 md:mt-2 mt-2">
+                    <div class="button flex justify-center  lg:mt-4 md:mt-2 mt-2">
                         <a class="lg:px-6 md:px-4 inline-flex item-center px-2 py-2 duration-300 border-2 border-gray-800 text-gray-800 hover:text-gray-200 hover:bg-gray-800 rounded-lg  "
                             href="project.html">More project</a>
                     </div>
@@ -841,9 +843,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </main>
 
     <footer>
@@ -973,6 +972,7 @@
         })
     </script>
 
+    <!-- our Project  -->
     <script>
         function filterProjects(category) {
             const items = document.querySelectorAll('.project-item');
