@@ -46,22 +46,22 @@
 
 <body class="bg-gray-200">
 
-    <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
+   <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
         <div class="chat-box  bg-gray-100 p-2 rounded-md ">
             <div class="top">
                 <div class="flex justify-between bg-gray-300 rounded-md">
                     <div class="back-btn flex">
                         <div><i class="fa-solid fa-arrow-left-long hover:bg-gray-400  p-2"></i></div>
-                        <div><i class="fa-solid fa-ellipsis  hover:bg-gray-400  p-2"></i></div>
                     </div>
                     <div class="min-btn" id="min-btn">
                         <div><i class="fa-solid fa-minus hover:bg-gray-400  p-2"></i></div>
                     </div>
                 </div>
                 <div class="flex mt-4 ">
-                    <div class="img  overflow-hidden">
+                    <div class="img overflow-hidden">
                         <img class="rounded-full"
-                            src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740" alt="">
+                            src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                            alt="">
                     </div>
                     <div class="chat-text">
                         <div class="bg-gray-200 p-1 text-sm rounded-md ml-2 mt-2">
@@ -71,37 +71,38 @@
                 </div>
             </div>
             <div class="bottom">
-                <div class="end bg-gray-800 hover:bg-gray-300 text-gray-100 hover:text-gray-800  text-center text-sm rounded-md p-2 mt-52"><a href="">Chat
-                        now</a></div>
+                <div
+                    class="end bg-gray-800 hover:bg-gray-300 text-gray-100 hover:text-gray-800  text-center text-sm rounded-md p-2 mt-52">
+                    <a href="">Chat
+                        now</a>
+                </div>
             </div>
         </div>
     </div>
     <div class="overflow-hidden">
         <div id="chatToggle" data-aos="fade-left" data-aos-duration="1500"
             class="fixed-chat fixed bottom-20 border-gray-800  right-4 z-20 overflow-hidden rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800 w-14 h-14 cursor-pointer">
-            <img src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740" alt=""
-                class="w-full  h-full object-cover rounded-full">
+            <img src="https://img.freepik.com/premium-photo/pretty-young-female-entrepreneu_274689-10534.jpg?w=740"
+                alt="" class="w-full  h-full object-cover rounded-full">
         </div>
     </div>
-
     <div class="scroll-btn overflow-hidden">
         <div data-aos="fade-left" data-aos-duration="1500" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
             class="fixed-btn rounded-full flex justify-center items-center bg-black hover:bg-gray-500 text-gray-100 hover:text-gray-800  static-btn">
             <i class="fa-solid fa-angles-up"></i>
         </div>
     </div>
-
     <header class="w-full shadow-md static-header">
         <section class="hidden md:block">
             <div class="bg-gray-600">
                 <div class="container mx-auto px-[15px] md:px-[36px] text-gray-100">
                     <div class="flex items-center justify-between p-2">
+                        <div class="top-center">
+                            <a href="call"><i class="fa-solid fa-phone mr-2"></i>+123 4567 890</a>
+                        </div>
                         <div class="top-left">
                             <a class="mail" href=""><i
                                     class="fa-solid fa-envelope mr-2"></i>jkconstruction123@gmail.com</a>
-                        </div>
-                        <div class="top-center">
-                            <a href="call"><i class="fa-solid fa-phone mr-2"></i>+123 4567 890</a>
                         </div>
                         <div class="top-right">
                             <div class="flex text-md">
@@ -120,10 +121,11 @@
                 <div class="flex justify-between items-center ">
                     <!-- Logo -->
                     <div class=" logo ">
-                        <img src="img/jk.png" width="100%" alt="">
+                        <a href="construction.html"> <img src="img/jk.png" width="100%" alt="">
+                        </a>
                     </div>
                     <!-- Desktop Menu -->
-                    <ul class="hidden md:flex space-x-6 items-center m-4 ">
+                    <ul class="hidden lg:flex space-x-6 items-center m-4 ">
                         <li class="relative group">
                             <a href="construction.html" class="hover:text-gray-400">Home</a>
                         </li>
@@ -133,15 +135,19 @@
                             </a>
                             <ul
                                 class="absolute hidden group-hover:block bg-gray-700 mt-[0px] rounded-md p-2 space-y-2 z-10 min-w-max">
-                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Construction
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Construction
                                         Consultation</a></li>
-                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Interior Design</a>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Interior
+                                        Design</a>
                                 </li>
-                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Home Renovations</a>
+                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Home
+                                        Renovations</a>
                                 </li>
                                 <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Building
                                         Engineering</a></li>
-                                <li><a href="services.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Architecture &
+                                <li><a href="services.html"
+                                        class="block px-3 py-1 hover:bg-gray-600 rounded">Architecture &
                                         Building</a></li>
                             </ul>
                         </li>
@@ -151,9 +157,11 @@
                             </a>
                             <ul
                                 class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
-                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">About Us</a></li>
-                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Team</a></li>
-                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">FAQ</a></li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">About
+                                        Us</a>
+                                </li>
+                                <li><a href="about.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Team</a>
+                                </li>
                             </ul>
                         </li>
                         <li class="relative group">
@@ -162,9 +170,13 @@
                             </a>
                             <ul
                                 class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
-                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Default</a></li>
-                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Grid</a></li>
-                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Post Details</a>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog
+                                        Default</a></li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog
+                                        Grid</a>
+                                </li>
+                                <li><a href="blog.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Blog Post
+                                        Details</a>
                                 </li>
                             </ul>
                         </li>
@@ -174,27 +186,39 @@
                             </a>
                             <ul
                                 class="absolute hidden group-hover:block bg-gray-700 mt-[0] rounded-md p-2 space-y-2 z-10 min-w-max">
-                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 1</a></li>
-                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 2</a></li>
-                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project 3</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        1</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        2</a></li>
+                                <li><a href="project.html" class="block px-3 py-1 hover:bg-gray-600 rounded">Project
+                                        3</a></li>
                             </ul>
                         </li>
                         <li><a href="contect.html" class="hover:text-gray-400">Contact</a></li>
                     </ul>
-                    <div class="md:hidden">
-                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
-                            <i class="fa-solid fa-bars"></i>
-                        </button>
+                    <div class="flex items-center">
+                        <div class="md:flex justify-center items-center hidden mr-2">
+                            <div id="search-container" class="hidden  m-2">
+                                <input type="text" id="search-input" placeholder="Search..."
+                                    class="px-3 py-2 rounded-md bg-gray-700 text-white focus:outline-none focus:ring focus:border-blue-500 w-64" />
+                            </div>
+                            <div class="search-box hidden md:block m-2">
+                                <button id="search-toggle" class="text-white text-2xl focus:outline-none">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="lg:hidden">
+                            <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
+                                <i class="fa-solid fa-bars"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="hidden md:block m-2">
-                        <button id="menu-toggle" class="text-white text-2xl focus:outline-none">
-                            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-                        </button>
-                    </div>
+
                 </div>
             </div>
             <!-- Mobile Menu -->
-            <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+            <div id="mobile-menu" class="lg:hidden hidden px-4 pb-4">
                 <ul class="space-y-2">
                     <li><a href="construction.html" class="block px-4 py-2 rounded hover:bg-gray-700">Home</a></li>
                     <li>
@@ -211,7 +235,8 @@
                                 <li><a href="services.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Building
                                         Engineering</a></li>
                                 <li><a href="services.html"
-                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Architecture & Building</a>
+                                        class="block py-1 hover:bg-gray-700 rounded-md p-2">Architecture &
+                                        Building</a>
                                 </li>
                             </ul>
                         </details>
@@ -224,42 +249,42 @@
                                         Us</a></li>
                                 <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Team</a>
                                 </li>
-                                <li><a href="about.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">FAQ</a>
-                                </li>
-                            </ul>
-                        </details>
                     </li>
-                    <li>
-                        <details class="bg-gray-800 rounded">
-                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Blog</summary>
-                            <ul class="pl-4 pb-2">
-                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
-                                        Default</a></li>
-                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
-                                        Grid</a></li>
-                                <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog Post
-                                        Details</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li>
-                        <details class="bg-gray-800 rounded">
-                            <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Project</summary>
-                            <ul class="pl-4 pb-2">
-                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
-                                        1</a></li>
-                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
-                                        2</a></li>
-                                <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
-                                        3</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li><a href="contect.html" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a></li>
+                </ul>
+                </details>
+                </li>
+                <li>
+                    <details class="bg-gray-800 rounded">
+                        <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Blog</summary>
+                        <ul class="pl-4 pb-2">
+                            <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                    Default</a></li>
+                            <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog
+                                    Grid</a></li>
+                            <li><a href="blog.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Blog Post
+                                    Details</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li>
+                    <details class="bg-gray-800 rounded">
+                        <summary class="px-4 py-2 cursor-pointer hover:bg-gray-700">Project</summary>
+                        <ul class="pl-4 pb-2">
+                            <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                    1</a></li>
+                            <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                    2</a></li>
+                            <li><a href="project.html" class="block py-1 hover:bg-gray-700 rounded-md p-2">Project
+                                    3</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="contect.html" class="block px-4 py-2 rounded hover:bg-gray-700">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
 
     <main>
 
@@ -482,6 +507,31 @@
         AOS.init();
     </script>
 
+ <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const searchToggle = document.getElementById('search-toggle');
+            const searchContainer = document.getElementById('search-container');
+            const searchInput = document.getElementById('search-input');
+
+            searchToggle.addEventListener('click', () => {
+                searchContainer.classList.toggle('hidden');
+                if (!searchContainer.classList.contains('hidden')) {
+                    searchInput.focus(); // Focus when shown
+                }
+            });
+
+            // Optional: Trigger search on Enter key
+            searchInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter') {
+                    const query = searchInput.value.trim();
+                    if (query) {
+                        // Redirect to search results
+                        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
