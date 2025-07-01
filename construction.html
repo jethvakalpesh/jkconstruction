@@ -451,19 +451,20 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div class="rank text-white">
-                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl">87+</h1>
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl counter" data-target="84">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Happy Customers</p>
                     </div>
                     <div class="rank text-white">
-                        <h1 class="font-bold text-white text-3xl md:text-4xl lg:text-5xl">43+</h1>
+                        <h1 class="font-bold text-white text-3xl md:text-4xl lg:text-5xl counter" data-target="53">0
+                        </h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Complete Work</p>
                     </div>
                     <div class="rank text-white">
-                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl">57+</h1>
+                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl counter" data-target="64">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Our Award</p>
                     </div>
                     <div class="rank text-white">
-                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl">48+</h1>
+                        <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl counter" data-target="87">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Company Member</p>
                     </div>
                 </div>
@@ -1050,6 +1051,28 @@
                     }
                 }
             });
+        });
+    </script>
+
+<!-- counter script -->
+    <script>
+        let counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            let target = +counter.getAttribute('data-target');
+            let count = 0;
+
+            let step = () => {
+                if (count < target) {
+                    count++;
+                    counter.innerText = count;
+                    setTimeout(step, 20); // delay
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+
+            step();
         });
     </script>
 

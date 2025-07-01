@@ -45,7 +45,7 @@
 </head>
 
 <body class="bg-gray-200">
- <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
+    <div id="chatBox" class="chat-box hidden p-2 bg-gray-100 rounded-md">
         <div class="chat-box  bg-gray-100 p-2 rounded-md ">
             <div class="top">
                 <div class="flex justify-between bg-gray-300 rounded-md">
@@ -329,19 +329,19 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                     <div class="rank text-white">
-                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">87+</h1>
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl counter" data-target="84">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Happy Customers</p>
                     </div>
                     <div class="rank text-white ">
-                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">43+</h1>
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl counter" data-target="53">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Complete Work</p>
                     </div>
                     <div class="rank text-white">
-                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">57+</h1>
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl counter" data-target="64">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Our Award</p>
                     </div>
                     <div class="rank text-white">
-                        <h1 class="font-semibold  text-3xl md:text-4xl lg:text-5xl">48+</h1>
+                        <h1 class="font-bold  text-3xl md:text-4xl lg:text-5xl counter" data-target="87">0</h1>
                         <p class="font-semibold  text-base md:text-xl lg:text-2xl">Company Member</p>
                     </div>
                 </div>
@@ -507,7 +507,8 @@
                                 class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 rounded-t-lg border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
                                 data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
                                 aria-controls="accordion-flush-body-1">
-                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees have many years of
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees have
+                                    many years of
                                     experience</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
@@ -536,7 +537,8 @@
                                 class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2  border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
                                 data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
                                 aria-controls="accordion-flush-body-2">
-                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Quality construction continues after
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Quality
+                                    construction continues after
                                     the project</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
@@ -565,7 +567,8 @@
                                 class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
                                 data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
                                 aria-controls="accordion-flush-body-3">
-                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">We use technology to do the job more
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">We use technology
+                                    to do the job more
                                     quickly</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
@@ -594,7 +597,8 @@
                                 class="flex items-center justify-between  w-full lg:p-3 md:p-1 p-2 border-2 border-gray-800 hover:bg-gray-800 hover:text-gray-300 gap-3"
                                 data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
                                 aria-controls="accordion-flush-body-3">
-                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees are continually trained on
+                                <span class="lg:text-xl md:text-lg text-gray-700 hover:text-gray-100">Employees are
+                                    continually trained on
                                     safety issues</span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </button>
@@ -774,22 +778,22 @@
 
     </footer>
 
-     <!-- right-bottom chatBox -->
-     <script>
+    <!-- right-bottom chatBox -->
+    <script>
         document.getElementById('chatToggle').addEventListener('click', function () {
             const chatBox = document.getElementById('chatBox');
             chatBox.classList.toggle('hidden');
         });
     </script>
-     <script>
+    <script>
         document.getElementById('min-btn').addEventListener('click', function () {
             const chatBox = document.getElementById('chatBox');
             chatBox.classList.toggle('hidden');
         });
     </script>
 
-      <!-- mobile menu -->
-      <script>
+    <!-- mobile menu -->
+    <script>
         document.getElementById('menu-toggle').addEventListener('click', () => {
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
@@ -819,7 +823,7 @@
         AOS.init();
     </script>
 
-     <script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const searchToggle = document.getElementById('search-toggle');
             const searchContainer = document.getElementById('search-container');
@@ -842,6 +846,28 @@
                     }
                 }
             });
+        });
+    </script>
+
+    <!-- counter script -->
+    <script>
+        let counters = document.querySelectorAll('.counter');
+
+        counters.forEach(counter => {
+            let target = +counter.getAttribute('data-target');
+            let count = 0;
+
+            let step = () => {
+                if (count < target) {
+                    count++;
+                    counter.innerText = count;
+                    setTimeout(step, 20); // delay
+                } else {
+                    counter.innerText = target + '+';
+                }
+            };
+
+            step();
         });
     </script>
 
